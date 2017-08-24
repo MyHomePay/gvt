@@ -13,7 +13,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/FiloSottile/gvt/fileutils"
+	"github.com/MyHomePay/gvt/fileutils"
 )
 
 // RemoteRepo describes a remote dvcs repository.
@@ -332,9 +332,9 @@ func (g *gitrepo) Checkout(branch, tag, revision string) (WorkingCopy, error) {
 	quiet := false
 	args := []string{
 		"clone",
+		"-q",          // silence progress report to stderr
 		"--recursive", // include submodules
 		"-j8",         // fetch up to 8 submodules in parallel (for performance)
-		"-q",          // silence progress report to stderr
 		g.url,
 		dir,
 	}
