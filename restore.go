@@ -9,8 +9,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/FiloSottile/gvt/fileutils"
-	"github.com/FiloSottile/gvt/gbvendor"
+	"github.com/MyHomePay/gvt/fileutils"
+	"github.com/MyHomePay/gvt/gbvendor"
 )
 
 var (
